@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0" />
+		
+	<title>
+		How to animate a straight
+		line in linear motion?
+	</title>
+
+	
+</head>
+
+<body>
+	<div id="s1" class="element">Supply 1</div>
+<div id="s2" class="element">Supply 2</div>
+<div id="s3" class="element">Supply 3</div>
+
+<div class="s1 s2">Building 1</div>
+<div class="s2">Building 2</div>
+<div class="s1 s3">Building 3</div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+        crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="js/bezier.js"></script>
+<script>
+    $(function(){
+
+$('.element').bezier();
+
+});
+
+$('.element').bezier({
+  strokeColor : '#999',
+  strokeWidth : 2,
+  opacity : 1,
+  fill : 'none'
+});
+
+$('.element').bezier({
+  animate : true,
+  animationDirection : 'right',
+  animationDuration : 0.75
+});
+
+
+
+
+</script>
+</body>
+
+</html>
